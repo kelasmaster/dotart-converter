@@ -4,6 +4,7 @@
 const asciiChars = '@%#*+=-:. '.split('');
 
 document.getElementById('imageInput').addEventListener('change', handleImageUpload);
+document.getElementById('copyButton').addEventListener('click', copyAsciiArt);
 
 function handleImageUpload(event) {
   const file = event.target.files[0];
@@ -54,4 +55,17 @@ function processImage(img) {
 
   // Display ASCII art
   document.getElementById('asciiOutput').textContent = asciiArt;
+}
+
+function copyAsciiArt() {
+  const asciiOutput = document.getElementById('asciiOutput');
+  const textToCopy = asciiOutput.textContent;
+
+  // Use the Clipboard API to copy text
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert('ASCII art copied to clipboard!');
+  }).catch((err) => {
+    console.error('Failed to copy ASCII art: ', err);
+    alert('Failed to copy ASCII art. Please try again.');
+  });
 }
