@@ -31,6 +31,22 @@ canvas {
   display: none; /* Hidden, used for processing */
 }
 
+.controls {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+}
+
 pre {
   font-family: 'Courier New', Courier, monospace;
   font-size: 8px; /* Adjust for responsiveness */
