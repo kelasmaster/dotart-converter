@@ -1,0 +1,52 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+canvas {
+  display: none; /* Hidden, used for processing */
+}
+
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px; /* Adjust for responsiveness */
+  line-height: 1;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+  max-height: 300px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  pre {
+    font-size: 12px;
+  }
+}
